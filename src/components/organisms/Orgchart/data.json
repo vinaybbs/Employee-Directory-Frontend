@@ -1,0 +1,33 @@
+[
+  {
+    "name": "CEO Name",
+    "designation": "CEO",
+    "image": "Vinay.jpeg"
+  },
+  {
+    "name": "CTO Name",
+    "designation": "CTO",
+    "image": "Vinay.jpeg",
+    "children": [
+      {
+        "name": "Senior Principal Engineer Name",
+        "designation": "Senior Principal Engineer",
+        "image": "Vinay.jpeg",
+        "children": [
+          {
+            "name": "Principal Engineer Name",
+            "designation": "Principal Engineer",
+            "image": "Vinay.jpeg",
+            "children": [
+              {
+                "name": "Manager Name",
+                "designation": "Manager",
+                "image": "Vinay.jpeg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

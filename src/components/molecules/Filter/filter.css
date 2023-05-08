@@ -1,0 +1,72 @@
+button,
+input {
+  font-family: inherit;
+  font-size: 18px;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+
+.filter {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  padding: 5px;
+  border-radius: 50px;
+  transition: 0.4s;
+  top:9px
+}
+
+.filter:is(:hover, .open) {
+  background: rgba(0, 0, 0, 0.06);
+}
+.filter.open{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+}
+.filter.open input {
+  max-width: 200px;
+}
+
+.filter input {
+  background: transparent;
+  border: 0;
+  max-width: 0;
+  padding: 0;
+  text-indent: 20px;
+  color: #222222;
+  outline: none;
+  transition: 0.4s;
+}
+
+.filter input::placeholder {
+  color: rgba(0, 0, 0, 0.375);
+}
+
+.nav-button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  color: #222222;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: 0.25s;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.075);
+}
+.nav-button.uil.uil-filter{
+  align-self: center;
+}
+.filter.drop{
+  visibility: hidden;
+}

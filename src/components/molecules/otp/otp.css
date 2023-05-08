@@ -1,0 +1,112 @@
+.background {
+  
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #880fda, #105CA8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .container {
+    
+    min-width: 480px;
+    height: fit-content;
+    width: fit-content;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .arrow {
+    padding-top: 6%;
+    width: 9%;
+    padding-right: 90%;
+  }
+  
+  .otp-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  
+  .otp-text {
+    text-align: center;
+  }
+  
+  .sent {
+    display: inline;
+  }
+  
+  .email {
+    display: inline;
+    font-weight: 100;
+  }
+  
+  .email-sent {
+    text-align: center;
+  
+  }
+  
+  
+  .otp-input {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 4px;
+    outline: none;
+    background-color: #d9d9d9;
+  
+  }
+  
+  .otp-input:focus {
+    border-color: #007bff;
+  }
+  
+  
+  .resend {
+    text-align: center;
+    cursor: pointer;
+    
+  }
+  
+  .Button {
+    outline: none;
+    border: none;
+    background-color: #9900ff;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 16px;
+    width: 50%;
+    transition: 100ms;
+    cursor: pointer;
+  }
+  
+  .submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px
+  }
+  .inputfield input{
+    width: 90%;
+  }
+  .error-message {
+    color: red;
+  }

@@ -1,0 +1,67 @@
+.dropdowns-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 1px 0;
+  left: 2px;
+}
+.dropdown-container {
+  position: relative;
+  margin-right: 20px;
+}
+.dropdown-container button {
+  padding: 10px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1;
+}
+.dropdown-option {
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+}
+.dropdown-option input[type="checkbox"] {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.dropdown-option input[type="checkbox"]:checked + span {
+  color: #000;
+  font-weight: bold;
+}
+.dropdown-option:hover {
+  background-color: #F2F2F2;
+}
+.dropdown-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  gap:20px;
+  width:140px
+}
+.dropdown-buttons button {
+  background-color: #0077FF;
+  color: white;
+  border: none;
+  padding: 2px 5px;
+  cursor: pointer;
+  position: relative;
+  left:8px;
+  right: 3px;
+  bottom: 5px;
+}
+.dropdown-buttons button:hover {
+  background-color: #0053BA;
+}

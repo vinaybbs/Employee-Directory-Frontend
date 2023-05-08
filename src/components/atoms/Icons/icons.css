@@ -1,0 +1,17 @@
+.icon a {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    display: inline-block;
+    padding-left: 5px;
+    margin-right: 10px;
+    color: #555;
+    transition: all 0.3s ease-in-out;
+}
+
+/* .icon a:hover {
+    color: #000;
+} */
+.fb :hover {
+    color: blue;
+}

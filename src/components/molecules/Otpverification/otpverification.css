@@ -1,0 +1,114 @@
+.background {
+
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #880fda, #105CA8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+
+    min-width: 480px;
+    height: fit-content;
+    width: fit-content;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.arrow {
+    padding-top: 6%;
+    width: 9%;
+    padding-right: 90%;
+}
+ .otpverification-image {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+ }
+
+ .otp-text {
+     text-align: center;
+ }
+  .email-sent {
+      text-align: center;
+
+  }
+
+  .inputfield {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-left: 45px;
+      
+  }
+  /* .Button {
+      display: flex;
+      margin-left: 1.8rem;
+      width: 75%;
+      padding-bottom: 20px;
+      padding-left: 18px;
+      padding-top: 10px;
+    align-items: center;
+
+    justify-content: center;
+      
+     
+  }
+
+  .Button Button {
+      outline: none;
+      border: none;
+      background-color: #9900ff;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 10px 16px;
+      width: 38%;
+      transition: 100ms;
+      cursor: pointer;
+  } */
+  .message{
+    margin-top: 10px;
+    padding-left: 60px;
+  }
+  .Buttonn{
+    display: flex;
+        align-items: center;
+    
+        justify-content: center;
+        margin-right: 20px;
+        margin-top: -1px;
+
+  }
+  .Button {
+      outline: none;
+      border: none;
+      background-color: #9900ff;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 10px 16px;
+      width: 20%;
+      transition: 100ms;
+      display: flex;
+       align-items: center;
+
+    justify-content: center;
+
+      cursor: pointer;
+  }

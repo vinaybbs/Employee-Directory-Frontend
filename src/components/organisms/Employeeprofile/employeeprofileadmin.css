@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-bg {
+    /* border: 2px solid grey; */
+    /* min-width: 420px; */
+    width: 100vw;
+    height: 100%;
+}
+
+.rectangle {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 30vh;
+    background: #064D6F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.rectangle-content {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Main-rectangle-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: #ffff;
+    margin-bottom: 1.5em;
+}
+
+.icons-subtitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-profile-pic {
+    border: 2px solid grey;
+    width: 20%;
+    height: 22vh;
+    max-width: 200px;
+    max-height: 200px;
+    background-color: #ffff;
+    position: absolute;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    
+}
+
+.emp-details-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-details {
+    /* border: 2px solid yellow; */
+    width: 80%;
+    height: 100%;
+    margin-top: 3vh;
+    /* margin: 3vh 0 0 2em; */
+    padding: 1em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+
+.Button-container {
+    /* display: none; */
+    /* border: 2px solid lightskyblue; */
+    margin-top: 10vh;
+    height: fit-content;
+    margin: 10vh 1em 0 1em;
+
+}
+
+.btn {
+    margin: 10px 0;
+}
+
+.popup-1 {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-1 p {
+    margin-bottom: 10px;
+}
+
+.popup-1 button {
+    margin-right: 10px;
+    background-color: #064D6F;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-1 button:last-child {
+    background-color: #4B4646;
+}
+
+.popup-2 {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-2 p {
+    margin-bottom: 10px;
+}
+
+.popup-2 button {
+    margin-right: 10px;
+    background-color: #064D6F;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-2 button:last-child {
+    background-color: #4B4646;
+}
+
+.emp-text-field-container {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.employee-buttons {
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid red; */
+    justify-content: space-evenly;
+    margin: 20px;
+    
+}
+
+@media only screen and (max-width: 425px) {
+    .rectangle {
+        height: 22vh;
+    }
+
+    .employee-profile-pic {
+        width: 35vw;
+        height: 15vh;
+    }
+
+    .employee-details {
+        width: 100%;
+    }
+
+    .Main-rectangle-content {
+        left: 35%;
+    }
+}
+
+@media only screen and (min-width: 426px) {
+    .emp-details-container {
+        flex-direction: row-reverse;
+    }
+
+    .employee-profile-pic {
+        left: 78%;
+        min-width: 150px;
+        width: 20vw;
+        height: 25vh;
+    }
+
+    .employee-details {
+        margin: 7vh 10% 0 10%;
+    }
+
+    .Button-container {
+        margin-top: 15vh;
+        margin: 15vh 5em 0 0;
+    }
+
+    .Main-rectangle-content {
+        left: 12%;
+    }
+}
+@media screen and (min-width: 628px) {
+    .employee-profile-pic {
+        left: 83%;
+    }
+
+    .Button-container {
+        margin-right: 10%;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .employee-profile-pic {
+        left: 86%;
+    }
+
+    .Button-container {
+        margin-right: 11%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .employee-profile-pic {
+        left: 90%;
+    }
+}

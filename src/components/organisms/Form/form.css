@@ -1,0 +1,155 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-box{
+    border: 2px solid red ;
+    width: 100%;
+    min-width: 420px;
+    height: auto;
+    background: #064D6F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+.profile-pic-container {
+    background-color: #fff;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+    /* margin: 0 25vw; */
+}
+
+.profile-pic-container {
+    /* position: relative; */
+    width: 150px;       
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+.profile-pic-container img {
+    width: 100%;
+    height: auto;
+}
+
+.upload-image-container{
+    margin: 2em 0;
+    display: flex;
+    flex-direction: row;
+    color: blue;
+}
+
+.Employee-details-container{
+    background-color: #FFFFFF;
+    border: 2px solid yellow;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    border-radius: 20px;
+
+}
+.form-title {
+    text-align: center;
+    align-self: center;
+    margin: 1.2em;
+}
+
+.employee-details-input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container-name, .container-row{
+    margin: 1rem;
+}
+.container-name input {
+    /* width: 12.5rem;   */
+    width: 100%;
+    border: 1.5px solid rgba(128, 128, 128, 0.5);
+    border-radius: 5px;
+    padding: 6px;
+}
+.container-row input {
+    width: 100%;
+    border: 1.5px solid rgba(128, 128, 128, 0.5);
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.error{
+    color: red;
+    /* margin: 1em; */
+    /* font-size: ; */
+}
+
+.employee-buttons {
+    margin: 1em;
+    /* display: flex; */
+    /* flex-direction: row; */
+
+}
+.form-buttons{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    gap: 1em;
+}
+.form-buttons Button {
+    color: #FFFFFF;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 3em;
+}
+.required{
+    color: red
+}
+
+@media only screen and (min-width: 420px ){
+    .form-box{
+        width: 100%;
+    }
+    .Employee-details-container{
+        width: 80%;
+    }
+    .name-row-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .form-second-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* border: 0.5px solid red; */
+        /* grid-gap: 25%; */
+    }
+    /* .form-second-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } */
+    .container-row input {
+        width: 100%;
+    }
+    
+    .form-buttons{
+        flex-direction: row;
+        margin-top: 3em;
+        gap: 1em;
+    }
+    
+    
+
+}

@@ -1,0 +1,140 @@
+.page_container {
+    box-sizing: border-box;
+    min-width: 420px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .second-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 80vh; for desktop view */
+    background-color: #105ca8;
+  }
+  
+  .left-section {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .right-section {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-container {
+    background-color: rgb(255, 255, 255);
+    height: 90%;
+    width: 70%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: auto;
+    gap: 1rem;
+  }
+  
+  .card-text {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .card-text h1{
+    font-size: 2em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    padding: 1em;
+}
+.card-text h2{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+  
+  .email-comp,
+  .password-comp {
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+    .email-comp input,
+    .password-comp input{
+    width: 100%;
+}
+.email-comp input::placeholder , .password-comp input::placeholder{
+  font-size: 0.8rem; 
+}
+
+  .email-comp .icon,
+  .password-comp .icon {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+
+  }
+  .error{
+    color: red;
+    margin-top: 10px;
+    margin-left: 1rem;
+  }
+.forgot-pass{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+} 
+.forgot-pass a{
+    font-size: 1rem;
+    /* text-align: right; */
+}
+  hr{
+    width: 80%;
+}
+.googlebun{
+    position: absolute;
+    bottom: 1rem;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+}
+.googlebutton{
+  display :flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10%;
+  transform: scale(1.03);
+}
+  
+  @media only screen and (min-width: 420px) {
+    .card-container {
+      width: 80%;
+    }
+    
+  }
+  
+  @media only screen and (min-width: 768px) {
+    
+    .left-section {
+      flex-basis: 50%;
+    }
+    .right-section {
+      flex-basis: 50%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+   
+  
+    .card-container {
+      /* width: 60%; */
+    }
+  }

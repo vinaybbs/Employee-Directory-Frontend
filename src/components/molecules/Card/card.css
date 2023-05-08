@@ -1,0 +1,77 @@
+
+
+.login_component {
+    background: rgb(242, 243, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 3vw; */   
+    flex-direction: column;
+    width: 70%;
+    height: 80%;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 75px;
+    margin-top: 30px;
+}
+
+.login_header {
+    font-size: 40px;
+    font-weight: 800;
+    /* margin: 20px 0 0 0;  */
+    margin: 20px 0 10px 0;
+}
+
+.card_description {
+    margin: 17px 0;
+    font-size: 28px;
+}
+
+.password_comp {
+    margin-top: 8px;
+    width: 25vw;
+
+}
+
+.form_forget_password {
+    margin: 10px 0 0 150px;
+    font-size: small;
+}
+
+.error {
+    color: red;
+    font-size: small;
+    margin: 10px;
+}
+
+
+.icon{
+    position: absolute;
+    margin: -28px 0 0 235px;
+    cursor: pointer;
+}
+
+.email_comp{
+    display: absolute;
+    width: 25vw;
+    margin: 10px;
+}
+.submit_button {
+    margin: 20px 0 0 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    
+}
+.Input{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    width:350px
+    
+}
+
+.google_btn{
+    margin: -10px 0 30px 0 ;
+}
