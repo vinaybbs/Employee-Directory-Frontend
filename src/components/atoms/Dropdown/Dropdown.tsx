@@ -1,79 +1,76 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Dropdowns.css";
-import { filterdepartment, filterdesignation, filterjobtitle, url } from "../../../Apis/Api";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+
 interface MultiSelectDropdownProps {
   options: string[];
   label: string;
-  endpoint: string;
 }
-interface Employee {
-  employeeId: number;
-  employeeFirstName: string;
-  employeeLastName: string;
-  employeeJobTitle: string;
-  employeeProfilePhoto: string;
-  employeeGit: string;
-  employeeSlack: string;
-  employeeLinkedIn: string;
-  employeeEmail: string;
-}
-const designation=["Full-Time", "Intern"]
-const jobtitle =["Data Analysts", "Java Developers", "React Developers","C# Developers","Angular","SDET","HR","HRSpoc","Admin","Manager","React-Native"]
-const department=["Development", "Testing", "DevOps","Management","Data Engineer"]
-const MultiSelectDropdown = ({
-  options,
-  label,
-  endpoint,
-}: MultiSelectDropdownProps) => {
+
+const designation = ["Full-Time", "Intern"];
+const jobtitle = [
+  "Data Analyst",
+  "Java Developer",
+  "React Developer",
+  "C# Developer",
+  "Angular Developer",
+  "SDET",
+  "HR",
+  "HRSpoc",
+  "Manager",
+  "React Native Developer",
+];
+const department = ["Developer", "Tester", "DevOps", "Management", "Data Engineer"];
+
+const MultiSelectDropdown = ({ options, label }: MultiSelectDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [employees, setEmployees] = useState<Employee[]>([]);
   const [selected, setSelected] = useState<string | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+
   const toggleDropdown = () => setIsOpen(!isOpen);
+
   const handleSelect = async (value: string) => {
     setSelected(value);
   };
+
   const handleReset = () => {
     setSelected(null);
   };
-  const navigate=useNavigate()
+
   const handleApply = () => {
     if (selected !== null) {
       if (designation.includes(selected)) {
-        const config = {
-          headers: { 'ngrok-skip-browser-warning': 'true' }
-        };
-        axios.get<Employee[]>(`${filterdesignation}/${selected}`, config)
-          .then(response => console.log(response.data))
-          .catch(error => console.error(error))
-        console.log(selected)
-        
+        navigate(`/filterdesignation/${selected}`);
+        console.log(selected);
       }
       if (department.includes(selected)) {
-        const config = {
-          headers: { 'ngrok-skip-browser-warning': 'true' }
-        };
-        axios.get<Employee[]>(`${filterdepartment}/${selected}`, config)
-          .then(response => console.log(response.data))
-          .catch(error => console.error(error))
-        console.log(selected)
-        
+        navigate(`/filterdepartment/${selected}`);
+        console.log(selected);
       }
       if (jobtitle.includes(selected)) {
-        const config = {
-          headers: { 'ngrok-skip-browser-warning': 'true' }
-        };
-        axios.get<Employee[]>(`${filterjobtitle}/${selected}`, config)
-          .then(response => console.log(response.data))
-          .catch(error => console.error(error))
-        console.log(selected)
+        navigate(`/filterjobtitle/${selected}`);
+        console.log(selected);
       }
     }
   };
-  
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+
   return (
-    <div className="dropdown-container">
+    <div className="dropdown-container" ref={ref}>
       <button onClick={toggleDropdown}>{label}</button>
       {isOpen && (
         <div className="dropdown">
@@ -88,7 +85,7 @@ const MultiSelectDropdown = ({
             </label>
           ))}
           <div className="dropdown-buttons">
-           <button onClick={handleApply}>Apply</button>
+            <button onClick={handleApply}>Apply</button>
             <button onClick={handleReset}>Reset</button>
           </div>
         </div>
@@ -96,25 +93,15 @@ const MultiSelectDropdown = ({
     </div>
   );
 };
+
 const Dropdowns = () => {
   return (
     <div className="dropdowns-container">
-      <MultiSelectDropdown
-        options={designation}
-        label="Designation"
-        endpoint="employeedesignation"
-      />
-      <MultiSelectDropdown
-        options={jobtitle}
-        label="Job Title"
-        endpoint="employeetitle"
-      />
-      <MultiSelectDropdown
-        options={department}
-        label="Department"
-        endpoint="employeedept"
-      />
+      <MultiSelectDropdown options={designation} label="Designation" />
+      <MultiSelectDropdown options={jobtitle} label="Job Title" />
+      <MultiSelectDropdown options={department} label="Department" />
     </div>
   );
 };
+
 export default Dropdowns;

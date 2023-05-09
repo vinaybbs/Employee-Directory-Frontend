@@ -17,14 +17,7 @@
           {
             "name": "Principal Engineer Name",
             "designation": "Principal Engineer",
-            "image": "Vinay.jpeg",
-            "children": [
-              {
-                "name": "Manager Name",
-                "designation": "Manager",
-                "image": "Vinay.jpeg"
-              }
-            ]
+            "image": "Vinay.jpeg"
           }
         ]
       }

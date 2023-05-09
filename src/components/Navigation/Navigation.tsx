@@ -17,6 +17,9 @@ import Employeeprofile from "../organisms/Employeeprofile/Employeeprofileemploye
 import Employeeprofilehr from "../organisms/Employeeprofile/Employeeprofilehr";
 import Employeeprofilehrspoc from "../organisms/Employeeprofile/Employeeprofilehrspoc";
 import Userprofile from "../organisms/Userprofile/Userprofileadmin";
+import FiteredDepartmentList from "../atoms/DetailCard/Departmen";
+import FiteredDesignationList from "../atoms/DetailCard/Designation";
+import FiteredJobTitleList from "../atoms/DetailCard/JobTitle";
 
 
 
@@ -44,6 +47,9 @@ function Navigation(): JSX.Element {
         <Route path="/employeeadmin/:employeeEmail" element={<Employeeprofileadmin/>} />
         <Route path="/employeehrspoc/:employeeEmail" element={<Employeeprofilehrspoc/>}/>
         <Route path="/userprofile" element={<Userprofile/>}/>
+        <Route path="/filterdesignation/:designation" element={<FiteredDesignationList/>}/>
+        <Route path="/filterdepartment/:department" element={<FiteredDepartmentList/>}/>
+        <Route path="/filterjobtitle/:jobtitle" element={<FiteredJobTitleList/>}/>
       </Routes>
     </div>
   </Router>

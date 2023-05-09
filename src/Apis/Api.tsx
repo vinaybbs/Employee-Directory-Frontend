@@ -1,4 +1,4 @@
-export const url = "http://cors-anywhere.herokuapp.com/http://2fba-180-151-211-97.ngrok-free.app/";
+export const url = "http://cors-anywhere.herokuapp.com/http://5161-180-151-211-97.ngrok-free.app/";
 export const allemployees=`${url}/employee/allemployees`;
 export const login=`${url}/api/login`;
 export const googlebtnapi=`${url}/auth/api/get-email`;

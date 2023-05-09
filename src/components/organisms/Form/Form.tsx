@@ -354,14 +354,14 @@ function Formadmin() {
                 >
                   <MenuItem value='Data Analyst'>Data Analyst</MenuItem>    
                   <MenuItem value='Java Developer'>Java Developer</MenuItem>
-                  <MenuItem value='React Dev'>React Developer</MenuItem>
-                  <MenuItem value='C#'>C#</MenuItem>
-                  <MenuItem value='Angular'>Angular</MenuItem>
+                  <MenuItem value='React Developer'>React Developer</MenuItem>
+                  <MenuItem value='C# Developer'>C# Developer</MenuItem>
+                  <MenuItem value='Angular Developer'>Angular Developer</MenuItem>
                   <MenuItem value='SDET'>SDET</MenuItem>
                   <MenuItem value='HR'>HR</MenuItem>
                   <MenuItem value='HR Spoc'>HR Spoc</MenuItem>
                   <MenuItem value='Manager'>Manager</MenuItem>
-                  <MenuItem value='React Native'>React Native</MenuItem>
+                  <MenuItem value='React Native Develeoper'>React Native Developer</MenuItem>
                 </Select>
                 {errors.jobtitle && <div className='error'>{errors.jobtitle}</div>}
               </div>
